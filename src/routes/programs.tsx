@@ -187,7 +187,16 @@ export const Route = createFileRoute("/programs")({
   component: ProgramsPage,
 });
 
+const filterCategories = ["All", "Certification", "Diploma", "Teacher Training", "Meditation", "Kids", "Health & Fitness", "Retreat"];
+
+const categoryMatches = (course: Course, category: string) => {
+  if (category === "All") return true;
+  if (category === "Kids") return course.category === "Kids Yoga";
+  return course.category === category;
+};
+
 function ProgramsPage() {
+  const [activeCategory, setActiveCategory] = useState("All");
   const [galleryCourse, setGalleryCourse] = useState<Course | null>(null);
   const [galleryIndex, setGalleryIndex] = useState(0);
   const touchStartX = useRef<number | null>(null);
