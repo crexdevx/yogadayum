@@ -16,7 +16,31 @@ import {
   X,
 } from "lucide-react";
 
+import { FaqSection } from "@/components/faq-section";
 import courseYogaPranayama from "@/assets/course-yoga-pranayama.webp";
+
+const courseFaqs = [
+  {
+    q: "How do the category buttons work?",
+    a: "Tap a category such as Certification, Meditation or Therapy and the matching courses move to the top of the list. Tap All to bring back the full list in its original order.",
+  },
+  {
+    q: "Do I need previous yoga experience to join a course?",
+    a: "No. Most of our courses start from the basics and the teacher adjusts the practice to your level. Certification courses assume a regular practice, and we will guide you if a foundation course suits you better first.",
+  },
+  {
+    q: "Are the courses classroom based or online?",
+    a: "Courses run at our centre with personal guidance. Some theory sessions can be attended online when a batch allows it — ask us while enquiring about a specific course.",
+  },
+  {
+    q: "What is the fee and how do I pay?",
+    a: "Each course card lists its fee where it is confirmed. Payment details are shared once you enquire, and instalments can be discussed for longer certification courses.",
+  },
+  {
+    q: "How do I enrol in a course?",
+    a: "Open the course you like and use the enquiry or enrol button. Fill in the short form and we will contact you on WhatsApp with batch timings and the next steps.",
+  },
+];
 import courseYogaEducation from "@/assets/course-yoga-education.webp";
 import courseDiplomaYoga from "@/assets/course-diploma-yoga.webp";
 import courseDiplomaFoundations from "@/assets/course-diploma-foundations.webp";
@@ -297,6 +321,8 @@ function ProgramsPage() {
             />
           ))}
       </div>
+
+      <FaqSection faqs={courseFaqs} title="Course FAQs" />
 
       {galleryCourse ? (
         <div
