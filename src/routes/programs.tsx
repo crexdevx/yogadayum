@@ -298,6 +298,8 @@ function ProgramsPage() {
           ))}
       </div>
 
+      <FaqSection faqs={courseFaqs} title="Course FAQs" />
+
       {galleryCourse ? (
         <div
           role="dialog"
