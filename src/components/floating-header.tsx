@@ -29,7 +29,7 @@ export function FloatingHeader() {
       {/* Floating logo — top left */}
       <Link
         to="/"
-        preload="intent"
+        preload="render"
         onClick={() => setOpen(false)}
         className="group absolute left-4 top-4 z-30 sm:left-6 sm:top-6"
         aria-label="North East Yoga and Meditation Centre — home"
@@ -53,7 +53,7 @@ export function FloatingHeader() {
           <Link
             key={link.to}
             to={link.to}
-            preload="intent"
+            preload="render"
             className="rounded-full px-4 py-2 font-medium tracking-wide text-white/90 transition-colors hover:bg-white/15 hover:text-white"
             activeProps={{ className: "rounded-full bg-white/20 px-4 py-2 font-medium tracking-wide text-white" }}
           >
@@ -63,7 +63,7 @@ export function FloatingHeader() {
         <Link
           to="/enroll"
           search={{ course: undefined }}
-          preload="intent"
+          preload="render"
           className="ml-1 inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 font-semibold text-course-hero transition-colors hover:bg-white/90"
         >
           Start here <ArrowUpRight aria-hidden="true" className="size-4" />
@@ -88,7 +88,7 @@ export function FloatingHeader() {
             <Link
               key={link.to}
               to={link.to}
-              preload="intent"
+              preload="render"
               onClick={() => setOpen(false)}
               className="block rounded-xl px-4 py-3 text-sm font-medium tracking-wide text-white/90 transition-colors hover:bg-white/15 hover:text-white"
               activeProps={{ className: "bg-white/20 text-white" }}
