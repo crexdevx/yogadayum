@@ -21,7 +21,7 @@ export function SiteFooter() {
     <footer className="bg-course-footer text-course-footer-foreground">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 py-14 sm:px-8 sm:py-16 lg:grid-cols-[1.3fr_0.7fr_1fr] lg:gap-16 lg:px-10">
         <div>
-          <Link to="/" preload="intent" className="inline-flex items-center gap-3" aria-label="North East Yoga and Meditation Centre home">
+          <Link to="/" preload="render" className="inline-flex items-center gap-3" aria-label="North East Yoga and Meditation Centre home">
             <img
               src={logoImg}
               alt="North East Yoga and Meditation Centre logo"
@@ -58,7 +58,7 @@ export function SiteFooter() {
               <li key={link.to}>
                 <Link
                   to={link.to}
-                  preload="intent"
+                  preload="render"
                   className="transition-colors hover:text-course-gallery-active"
                 >
                   {link.label}
@@ -88,7 +88,7 @@ export function SiteFooter() {
           <Link
             to="/enroll"
             search={{ course: undefined }}
-            preload="intent"
+            preload="render"
             className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-course-footer-foreground transition-colors hover:text-course-gallery-active"
           >
             Find your practice
