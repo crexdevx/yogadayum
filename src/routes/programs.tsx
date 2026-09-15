@@ -254,33 +254,48 @@ function ProgramsPage() {
             Transform your mind, body, and life through the power of yoga.
           </p>
           <nav aria-label="Course categories" className="courses-scroll mt-8 flex gap-2 overflow-x-auto pb-2">
-            {["All", "Certification", "Diploma", "Teacher Training", "Meditation", "Kids", "Health & Fitness", "Retreat"].map((category, index) => (
-              <span
-                key={category}
-                className={index === 0
-                  ? "shrink-0 rounded-full bg-course-hero-foreground px-4 py-2 text-xs font-semibold text-course-hero"
-                  : "shrink-0 rounded-full border border-course-hero-line px-4 py-2 text-xs font-semibold text-course-hero-foreground"
-                }
-              >
-                {category}
-              </span>
-            ))}
+            {filterCategories.map((category) => {
+              const isActive = activeCategory === category;
+              return (
+                <button
+                  key={category}
+                  type="button"
+                  onClick={() => setActiveCategory(category)}
+                  aria-pressed={isActive}
+                  className={isActive
+                    ? "shrink-0 cursor-pointer rounded-full bg-course-hero-foreground px-4 py-2 text-xs font-semibold text-course-hero transition-colors"
+                    : "shrink-0 cursor-pointer rounded-full border border-course-hero-line px-4 py-2 text-xs font-semibold text-course-hero-foreground transition-colors hover:bg-course-hero-foreground/10"
+                  }
+                >
+                  {category}
+                </button>
+              );
+            })}
           </nav>
         </div>
       </section>
 
       <div className="mx-auto max-w-7xl space-y-6 px-3 py-8 sm:px-6 sm:py-12 lg:space-y-10 lg:px-8 lg:py-16">
-        {courses.map((course, courseIndex) => (
-          <CourseSection
-            key={course.title}
-            course={course}
-            index={courseIndex}
-            onOpenGallery={() => {
-              setGalleryCourse(course);
-              setGalleryIndex(0);
-            }}
-          />
-        ))}
+        {[...courses]
+          .map((course, originalIndex) => ({ course, originalIndex }))
+          .sort((a, b) => {
+            const aMatch = categoryMatches(a.course, activeCategory) ? 0 : 1;
+            const bMatch = categoryMatches(b.course, activeCategory) ? 0 : 1;
+            return aMatch - bMatch || a.originalIndex - b.originalIndex;
+          })
+          .map(({ course, originalIndex }, sortedIndex) => (
+            <CourseSection
+              key={course.title}
+              course={course}
+              index={sortedIndex}
+              dimmed={!categoryMatches(course, activeCategory)}
+              eagerImage={originalIndex === 0 && sortedIndex === 0}
+              onOpenGallery={() => {
+                setGalleryCourse(course);
+                setGalleryIndex(0);
+              }}
+            />
+          ))}
       </div>
 
       {galleryCourse ? (
