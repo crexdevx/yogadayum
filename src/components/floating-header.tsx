@@ -62,6 +62,7 @@ export function FloatingHeader() {
         ))}
         <Link
           to="/enroll"
+          search={{ course: undefined }}
           preload="intent"
           className="ml-1 inline-flex items-center gap-1 rounded-full bg-white px-4 py-2 font-semibold text-course-hero transition-colors hover:bg-white/90"
         >

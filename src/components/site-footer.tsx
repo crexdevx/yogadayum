@@ -87,6 +87,7 @@ export function SiteFooter() {
           </div>
           <Link
             to="/enroll"
+            search={{ course: undefined }}
             preload="intent"
             className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-course-footer-foreground transition-colors hover:text-course-gallery-active"
           >
