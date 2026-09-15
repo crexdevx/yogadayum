@@ -585,6 +585,8 @@ function EnrollPage() {
         </div>
       </section>
 
+      <FaqSection faqs={enrollFaqs} title="Enrolment FAQs" />
+
     </main>
   );
 }
