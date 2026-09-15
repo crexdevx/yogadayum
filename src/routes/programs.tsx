@@ -389,8 +389,8 @@ function CourseSection({ course, index, dimmed, eagerImage, onOpenGallery }: { c
               className="aspect-square w-full object-cover"
               width={1200}
               height={1200}
-              loading={index === 0 ? "eager" : "lazy"}
-              fetchPriority={index === 0 ? "high" : "auto"}
+              loading={eagerImage ? "eager" : "lazy"}
+              fetchPriority={eagerImage ? "high" : "auto"}
               decoding="async"
             />
           ) : (
