@@ -83,7 +83,7 @@ export function FloatingHeader() {
 
       {/* Dropdown menu */}
       {open && (
-        <nav className="absolute right-4 top-[calc(4rem+0.5rem)] z-40 w-48 origin-top-right rounded-2xl border border-white/15 bg-black/40 p-2 shadow-[0_10px_40px_rgba(0,0,0,0.4)] backdrop-blur-md sm:right-6 sm:top-[calc(5rem+0.5rem)]">
+        <nav className="fixed right-4 top-[calc(4rem+0.5rem)] z-50 w-48 origin-top-right rounded-2xl border border-white/15 bg-black/70 p-2 shadow-[0_10px_40px_rgba(0,0,0,0.4)] backdrop-blur-md sm:right-6 sm:top-[calc(5rem+0.5rem)]">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.to}
