@@ -370,7 +370,7 @@ function ProgramsPage() {
   );
 }
 
-function CourseSection({ course, index, onOpenGallery }: { course: Course; index: number; onOpenGallery: () => void }) {
+function CourseSection({ course, index, dimmed, eagerImage, onOpenGallery }: { course: Course; index: number; dimmed: boolean; eagerImage: boolean; onOpenGallery: () => void }) {
   const reverse = index % 2 === 1;
   const accentClass = course.accent === "sun"
     ? "bg-course-sun"
@@ -379,7 +379,7 @@ function CourseSection({ course, index, onOpenGallery }: { course: Course; index
       : "bg-course-mist";
 
   return (
-    <article className={`course-panel overflow-hidden rounded-lg border border-course-border ${accentClass}`}>
+    <article className={`course-panel overflow-hidden rounded-lg border border-course-border transition-opacity duration-300 ${accentClass} ${dimmed ? "opacity-55" : ""}`}>
       <div className="grid lg:grid-cols-[minmax(18rem,0.82fr)_minmax(0,1.18fr)]">
         <div className={reverse ? "lg:order-2" : undefined}>
           {course.image ? (
