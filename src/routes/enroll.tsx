@@ -14,6 +14,30 @@ import {
 import logoImg from "@/assets/north-east-yoga-logo.webp";
 import { Button } from "@/components/ui/button";
 import { FloatingHeader } from "@/components/floating-header";
+import { FaqSection } from "@/components/faq-section";
+
+const enrollFaqs = [
+  {
+    q: "What happens after I submit the enrolment form?",
+    a: "Your details open a ready-made WhatsApp message to the centre. We reply with batch timings, seat availability and the fee for the course you picked.",
+  },
+  {
+    q: "Is a seat confirmed as soon as I send the form?",
+    a: "Not yet. The form is an enquiry — your seat is confirmed once we speak and the joining formalities are completed.",
+  },
+  {
+    q: "Can I enrol for someone else, like my child or parent?",
+    a: "Yes. Fill in the participant's name and age, and add a note in the message box so we know who will attend.",
+  },
+  {
+    q: "What if I am not sure which course to choose?",
+    a: "Pick the one closest to your goal or leave a note about what you want from your practice. We will suggest the right course and batch for your level.",
+  },
+  {
+    q: "Can I visit the centre before joining?",
+    a: "Absolutely. Call us on the listed number and drop in during class hours to meet the teachers and see the space.",
+  },
+];
 
 // Centre configuration — update these values when details change.
 const WHATSAPP_NUMBER = "918135828417"; // international format, no "+"
