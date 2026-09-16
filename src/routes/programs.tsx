@@ -162,7 +162,7 @@ const courses: Course[] = [
     title: "Professional Yoga Teacher Training",
     description: "A 9-month Yoga Teacher Training Course under the authorization of the World Yoga Development Society.",
     image: ttcHero,
-    alt: "Trainees practising together at the Professional Yoga Teacher Training course",
+    alt: "Yoga Teacher Training artwork — a meditating figure on a lotus with the words Learn, Practice, Teach",
     duration: "9 Months",
     fee: "To be added",
     category: "Teacher Training",
