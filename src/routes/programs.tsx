@@ -61,6 +61,11 @@ import wellnessHero from "@/assets/wellness-hero.webp";
 import wellnessGalleryOne from "@/assets/wellness-gallery-1.webp";
 import wellnessGalleryTwo from "@/assets/wellness-gallery-2.webp";
 import wellnessGalleryThree from "@/assets/wellness-gallery-3.webp";
+import propsHero from "@/assets/props-hero.webp";
+import propsGalleryOne from "@/assets/props-gallery-1.webp";
+import ttcHero from "@/assets/ttc-hero.webp";
+import ttcGalleryOne from "@/assets/ttc-gallery-1.webp";
+import ttcGalleryTwo from "@/assets/ttc-gallery-2.webp";
 import { Button } from "@/components/ui/button";
 import { FloatingHeader } from "@/components/floating-header";
 
@@ -156,12 +161,13 @@ const courses: Course[] = [
   {
     title: "Professional Yoga Teacher Training",
     description: "A 9-month Yoga Teacher Training Course under the authorization of the World Yoga Development Society.",
-    alt: "Professional yoga teacher training course image placeholder",
+    image: ttcHero,
+    alt: "Trainees practising together at the Professional Yoga Teacher Training course",
     duration: "9 Months",
     fee: "To be added",
     category: "Teacher Training",
     accent: "sage",
-    gallery: [],
+    gallery: [ttcGalleryOne, ttcGalleryTwo],
   },
   {
     title: "Complete Health, Fitness & Wellness",
@@ -177,12 +183,13 @@ const courses: Course[] = [
   {
     title: "Yoga with Props",
     description: "Yoga practice by using various props for support, alignment, and a deeper practice.",
-    alt: "Yoga with props course image placeholder",
+    image: propsHero,
+    alt: "Yoga with Props course artwork",
     duration: "Details Soon",
     fee: "₹1,500.00",
     category: "Yoga",
     accent: "sun",
-    gallery: [],
+    gallery: [propsGalleryOne],
   },
 ];
 
