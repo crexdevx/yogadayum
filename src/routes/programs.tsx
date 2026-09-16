@@ -57,6 +57,10 @@ import yogaSixMonthsTwo from "@/assets/gallery-yoga-6-months-2.webp";
 import diplomaYogaGalleryOne from "@/assets/gallery-diploma-yoga-1.webp";
 import yogaKidsGalleryOne from "@/assets/gallery-yoga-kids-1.webp";
 import yogaKidsGalleryTwo from "@/assets/gallery-yoga-kids-2.webp";
+import wellnessHero from "@/assets/wellness-hero.webp";
+import wellnessGalleryOne from "@/assets/wellness-gallery-1.webp";
+import wellnessGalleryTwo from "@/assets/wellness-gallery-2.webp";
+import wellnessGalleryThree from "@/assets/wellness-gallery-3.webp";
 import { Button } from "@/components/ui/button";
 import { FloatingHeader } from "@/components/floating-header";
 
@@ -162,12 +166,13 @@ const courses: Course[] = [
   {
     title: "Complete Health, Fitness & Wellness",
     description: "A complete health and fitness programme through yoga — full details will be added when confirmed.",
-    alt: "Complete health, fitness and wellness course image placeholder",
+    image: wellnessHero,
+    alt: "Complete Health, Fitness and Wellness package artwork",
     duration: "Details Soon",
     fee: "₹1,500.00",
     category: "Health & Fitness",
     accent: "teal",
-    gallery: [],
+    gallery: [wellnessGalleryOne, wellnessGalleryTwo, wellnessGalleryThree],
   },
   {
     title: "Yoga with Props",
