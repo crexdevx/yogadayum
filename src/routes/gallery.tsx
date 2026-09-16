@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { FloatingHeader } from "@/components/floating-header";
 import { FaqSection, type Faq } from "@/components/faq-section";
 
 const galleryFaqs: Faq[] = [
@@ -51,7 +52,8 @@ export const Route = createFileRoute("/gallery")({
 
 function GalleryPage() {
   return (
-    <main>
+    <main className="pt-28">
+      <FloatingHeader />
       <FaqSection faqs={galleryFaqs} title="Gallery FAQs" />
     </main>
   );

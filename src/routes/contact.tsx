@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { FloatingHeader } from "@/components/floating-header";
 import { FaqSection, type Faq } from "@/components/faq-section";
 
 const contactFaqs: Faq[] = [
@@ -51,7 +52,8 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   return (
-    <main>
+    <main className="pt-28">
+      <FloatingHeader />
       <FaqSection faqs={contactFaqs} title="Contact FAQs" />
     </main>
   );
